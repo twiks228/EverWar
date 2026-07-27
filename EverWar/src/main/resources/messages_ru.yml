@@ -1,0 +1,92 @@
+# ==========================================
+# EverWar - Сообщения (Русский)
+# ==========================================
+
+prefix: "&8[&6EverWar&8] "
+
+# Общие
+no-permission: "{prefix}&cУ вас нет прав для этого действия."
+player-not-found: "{prefix}&cИгрок &f{player} &cне найден."
+clan-not-found: "{prefix}&cКлан &f{clan} &cне найден."
+not-in-clan: "{prefix}&cВы не состоите в клане."
+already-in-clan: "{prefix}&cВы уже состоите в клане."
+invalid-usage: "{prefix}&cИспользование: &f{usage}"
+cooldown: "{prefix}&cПодождите &f{time} &cперед следующим действием."
+
+# Клан
+clan-created: "{prefix}&aКлан &f{clan} &a[&f{tag}&a] успешно создан!"
+clan-deleted: "{prefix}&cКлан &f{clan} &cбыл расформирован."
+clan-invited: "{prefix}&eВы пригласили &f{player} &eв клан."
+clan-invite-received: "{prefix}&eВас пригласили в клан &f{clan}&e! Напишите &f/war clan accept"
+clan-invite-expired: "{prefix}&7Приглашение в клан &f{clan} &7истекло."
+clan-joined: "{prefix}&a{player} &aвступил в клан &f{clan}&a!"
+clan-left: "{prefix}&c{player} &cпокинул клан."
+clan-kicked: "{prefix}&c{player} &cбыл исключён из клана."
+clan-full: "{prefix}&cКлан заполнен! Максимум &f{max} &cучастников."
+clan-name-taken: "{prefix}&cНазвание &f{name} &cуже занято."
+clan-tag-taken: "{prefix}&cТег &f{tag} &cуже используется."
+clan-name-invalid: "{prefix}&cНазвание должно быть от &f{min} &cдо &f{max} &cсимволов."
+clan-tag-invalid: "{prefix}&cТег должен быть ровно &f{length} &cсимвола."
+
+# Роли
+role-changed: "{prefix}&e{player} &eназначен на роль &f{role}"
+role-no-permission: "{prefix}&cУ вас нет прав для назначения ролей."
+role-cannot-promote: "{prefix}&cВы не можете назначить эту роль."
+
+# Территории
+territory-claimed: "{prefix}&aЧанк захвачен для клана &f{clan}"
+territory-unclaimed: "{prefix}&cЧанк освобождён."
+territory-denied: "{prefix}&cЭта территория принадлежит клану &f{clan}"
+territory-max-reached: "{prefix}&cДостигнут максимум территорий (&f{max}&c)."
+territory-not-claimed: "{prefix}&cЭтот чанк не принадлежит вашему клану."
+territory-wilderness: "{prefix}&7Это ничейная территория."
+territory-own: "{prefix}&aЭто территория вашего клана."
+
+# Дипломатия
+alliance-proposed: "{prefix}&eКлан &f{clan} &eпредлагает союз."
+alliance-accepted: "{prefix}&a🤝 Клан &f{clan} &aтеперь ваш союзник!"
+alliance-rejected: "{prefix}&cКлан &f{clan} &cотклонил предложение союза."
+alliance-ended: "{prefix}&7Союз с кланом &f{clan} &7расторгнут."
+enemy-declared: "{prefix}&c⚠ Клан &f{clan} &cобъявлен врагом!"
+enemy-ended: "{prefix}&7Вражда с кланом &f{clan} &7прекращена."
+neutral-set: "{prefix}&7Отношения с кланом &f{clan} &7нейтральны."
+
+# Война
+war-declared: "{prefix}&4⚔ Клан &f{attacker} &4объявил войну клану &f{defender}&4!"
+war-started: "{prefix}&c⚔ Война между &f{attacker} &cи &f{defender} &cначалась!"
+war-ended: "{prefix}&7Война между &f{attacker} &7и &f{defender} &7завершена."
+war-won: "{prefix}&a🏆 Клан &f{winner} &aодержал победу над &f{loser}&a!"
+war-lost: "{prefix}&c💀 Клан &f{loser} &cпроиграл войну клану &f{winner}&c."
+war-preparation: "{prefix}&e⏳ Война начнётся через &f{time} &e(подготовка)."
+war-already: "{prefix}&cВы уже в состоянии войны с этим кланом."
+war-no-supply: "{prefix}&cНедостаточно снабжения для объявления войны!"
+war-score: "{prefix}&7Счёт: &f{attacker} &7- &f{attacker_score} &8| &f{defender} &7- &f{defender_score}"
+
+# Осада
+siege-started: "{prefix}&c⚔ Осада территории &f{territory} &cначалась!"
+siege-success: "{prefix}&a🏴 Территория захвачена кланом &f{clan}&a!"
+siege-failed: "{prefix}&c🛡 Осада провалена! Защитники выстояли."
+siege-destroyed: "{prefix}&a🛡 Точка осады уничтожена!"
+siege-progress: "{prefix}&7Осада: &f{progress}%"
+siege-already: "{prefix}&cОсада уже идёт на этой территории."
+
+# Снабжение
+supply-added: "{prefix}&aРесурсы добавлены на склад клана."
+supply-not-enough: "{prefix}&cНедостаточно ресурсов на складе."
+supply-status: "{prefix}&7Склад: Еда &f{food}&7, Материалы &f{materials}&7."
+
+# Рейтинг
+top-header: "{prefix}&6===== Топ кланов ====="
+top-entry: "&e{place}. &f{clan} &7- &f{power} &7мощи (&f{members} &7участников)"
+top-footer: "{prefix}&6====================="
+
+# Информация
+info-header: "{prefix}&6===== Информация о клане ====="
+info-name: "&7Название: &f{clan} &7[&f{tag}&7]"
+info-leader: "&7Лидер: &f{leader}"
+info-members: "&7Участников: &f{count}&7/&f{max}"
+info-territories: "&7Территорий: &f{count}&7/&f{max}"
+info-power: "&7Мощь: &f{power}"
+info-allies: "&7Союзники: &f{allies}"
+info-enemies: "&7Враги: &f{enemies}"
+info-footer: "{prefix}&6==============================="

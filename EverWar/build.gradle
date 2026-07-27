@@ -1,0 +1,66 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.ever'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+configurations {
+    compileOnly {
+        resolutionStrategy.force 'org.spigotmc:spigot-api:1.21.1-R0.1-SNAPSHOT'
+    }
+}
+repositories {
+    mavenCentral()
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/' }
+    maven { url = 'https://jitpack.io' }
+}
+
+dependencies {
+    // Spigot API
+    compileOnly 'org.spigotmc:spigot-api:1.21.1-R0.1-SNAPSHOT'
+    
+    // SQLite
+    implementation 'org.xerial:sqlite-jdbc:3.45.1.0'
+    
+    // PlaceholderAPI
+    compileOnly 'me.clip:placeholderapi:2.11.5'
+    
+    // Vault
+    compileOnly 'com.github.MilkBowl:VaultAPI:1.7.1'
+    
+    // LuckPerms
+    compileOnly 'net.luckperms:api:5.4'
+    
+    // Annotations
+    compileOnly 'org.jetbrains:annotations:24.0.1'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    archiveBaseName.set('EverWar')
+    archiveVersion.set(version)
+    
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+processResources {
+    filesMatching('plugin.yml') {
+        expand('version': version)
+    }
+}

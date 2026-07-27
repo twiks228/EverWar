@@ -1,0 +1,162 @@
+# ==========================================
+# EverWar — Plugin Manifest
+# ==========================================
+
+name: EverWar
+version: '${version}'
+main: com.ever.war.EverWar
+api-version: '1.21'
+
+authors:
+  - EverTeam
+
+description: >
+  Система кланов, территорий, войн и стран для сервера Ever.
+  Замена Factions/Towny под модовый сервер с Create, SuperbWarfare,
+  Immersive Aircraft, ядерной наукой и другими модами.
+
+website: https://github.com/twiks228/Arclight
+
+# ==========================================
+# ЗАВИСИМОСТИ
+# ==========================================
+
+depend: []
+
+softdepend:
+  - Vault
+  - PlaceholderAPI
+  - LuckPerms
+  - DecentHolograms
+  - VentureChat
+  - TAB
+
+load: POSTWORLD
+
+# ==========================================
+# КОМАНДЫ
+# ==========================================
+
+commands:
+  war:
+    description: Главное меню EverWar — кланы, территории, войны
+    usage: |
+      /war                          — Главное меню (GUI)
+      /war clan create <name> <tag> — Создать клан
+      /war clan invite <nick>       — Пригласить игрока
+      /war clan accept              — Принять приглашение
+      /war clan leave               — Покинуть клан
+      /war territory claim          — Захватить чанк
+      /war territory unclaim        — Освободить чанк
+      /war territory map            — Карта территорий
+      /war shield on [1-15]         — Включить щит на N минут
+      /war shield off               — Выключить щит
+      /war shield status            — Статус щита
+      /war diplomacy ally <clan>    — Предложить союз
+      /war diplomacy enemy <clan>   — Объявить врагом
+      /war war declare <clan>       — Объявить войну
+      /war siege start              — Начать осаду
+      /war country create <n> <t>   — Создать страну
+      /war top                      — Рейтинг кланов
+      /war map                      — Карта в чате
+      /war help                     — Помощь
+    aliases:
+      - everwar
+      - ew
+      - клан
+      - clan
+
+# ==========================================
+# ПРАВА
+# ==========================================
+
+permissions:
+
+  # ========== ОСНОВНЫЕ ==========
+
+  everwar.use:
+    description: Доступ к основным командам EverWar
+    default: true
+
+  everwar.create:
+    description: Возможность создавать клан
+    default: true
+
+  everwar.claim:
+    description: Возможность захватывать территории
+    default: true
+
+  everwar.shield:
+    description: Возможность управлять щитом территории (временно, макс 15 мин)
+    default: true
+
+  everwar.country:
+    description: Возможность создавать страны
+    default: true
+
+  # ========== АДМИНИСТРАТОР ==========
+
+  everwar.admin:
+    description: Полный доступ к административным командам EverWar
+    default: op
+    children:
+      everwar.admin.bypass: true
+      everwar.admin.shield: true
+      everwar.admin.reload: true
+      everwar.admin.forcedelete: true
+      everwar.admin.setpower: true
+      everwar.admin.clearwars: true
+      everwar.admin.clearsieges: true
+
+  everwar.admin.bypass:
+    description: Обход защиты территорий (ломай/строй везде)
+    default: op
+
+  everwar.admin.shield:
+    description: >
+      Разрешение на включение постоянного щита (/war shield permanent)
+      и управление щитами других кланов (/war admin shield)
+    default: op
+
+  everwar.admin.reload:
+    description: Перезагрузка плагина (/war admin reload)
+    default: op
+
+  everwar.admin.forcedelete:
+    description: Принудительное удаление кланов (/war admin forcedelete)
+    default: op
+
+  everwar.admin.setpower:
+    description: Установка мощи игроков (/war admin setpower)
+    default: op
+
+  everwar.admin.clearwars:
+    description: Завершение войн кланов (/war admin clearwars)
+    default: op
+
+  everwar.admin.clearsieges:
+    description: Завершение осад кланов (/war admin clearsieges)
+    default: op
+
+  # ========== ГРУППЫ ДЛЯ LUCKPERMS ==========
+  # Эти группы автоматически назначаются через LuckPermsHook
+
+  everwar.role.leader:
+    description: Группа лидера клана (LuckPerms)
+    default: false
+
+  everwar.role.general:
+    description: Группа генерала клана (LuckPerms)
+    default: false
+
+  everwar.role.officer:
+    description: Группа офицера клана (LuckPerms)
+    default: false
+
+  everwar.role.fighter:
+    description: Группа бойца клана (LuckPerms)
+    default: false
+
+  everwar.role.recruit:
+    description: Группа рекрута клана (LuckPerms)
+    default: false

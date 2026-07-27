@@ -1,0 +1,92 @@
+# ==========================================
+# EverWar - Messages (English)
+# ==========================================
+
+prefix: "&8[&6EverWar&8] "
+
+# General
+no-permission: "{prefix}&cYou don't have permission to do this."
+player-not-found: "{prefix}&cPlayer &f{player} &cnot found."
+clan-not-found: "{prefix}&cClan &f{clan} &cnot found."
+not-in-clan: "{prefix}&cYou are not in a clan."
+already-in-clan: "{prefix}&cYou are already in a clan."
+invalid-usage: "{prefix}&cUsage: &f{usage}"
+cooldown: "{prefix}&cPlease wait &f{time} &cbefore next action."
+
+# Clan
+clan-created: "{prefix}&aClan &f{clan} &a[&f{tag}&a] has been created!"
+clan-deleted: "{prefix}&cClan &f{clan} &chas been disbanded."
+clan-invited: "{prefix}&eYou invited &f{player} &eto the clan."
+clan-invite-received: "{prefix}&eYou've been invited to clan &f{clan}&e! Type &f/war clan accept"
+clan-invite-expired: "{prefix}&7Invitation to clan &f{clan} &7has expired."
+clan-joined: "{prefix}&a{player} &ajoined clan &f{clan}&a!"
+clan-left: "{prefix}&c{player} &cleft the clan."
+clan-kicked: "{prefix}&c{player} &chas been kicked from the clan."
+clan-full: "{prefix}&cClan is full! Maximum &f{max} &cmembers."
+clan-name-taken: "{prefix}&cName &f{name} &cis already taken."
+clan-tag-taken: "{prefix}&cTag &f{tag} &cis already in use."
+clan-name-invalid: "{prefix}&cName must be from &f{min} &cto &f{max} &ccharacters."
+clan-tag-invalid: "{prefix}&cTag must be exactly &f{length} &ccharacters."
+
+# Roles
+role-changed: "{prefix}&e{player} &ehas been assigned role &f{role}"
+role-no-permission: "{prefix}&cYou don't have permission to assign roles."
+role-cannot-promote: "{prefix}&cYou cannot assign this role."
+
+# Territory
+territory-claimed: "{prefix}&aChunk claimed for clan &f{clan}"
+territory-unclaimed: "{prefix}&cChunk released."
+territory-denied: "{prefix}&cThis territory belongs to clan &f{clan}"
+territory-max-reached: "{prefix}&cMaximum territories reached (&f{max}&c)."
+territory-not-claimed: "{prefix}&cThis chunk doesn't belong to your clan."
+territory-wilderness: "{prefix}&7This is unclaimed territory."
+territory-own: "{prefix}&aThis is your clan's territory."
+
+# Diplomacy
+alliance-proposed: "{prefix}&eClan &f{clan} &eproposes an alliance."
+alliance-accepted: "{prefix}&a🤝 Clan &f{clan} &ais now your ally!"
+alliance-rejected: "{prefix}&cClan &f{clan} &crejected the alliance proposal."
+alliance-ended: "{prefix}&7Alliance with clan &f{clan} &7has ended."
+enemy-declared: "{prefix}&c⚠ Clan &f{clan} &chas been declared enemy!"
+enemy-ended: "{prefix}&7Enmity with clan &f{clan} &7has ended."
+neutral-set: "{prefix}&7Relations with clan &f{clan} &7are neutral."
+
+# War
+war-declared: "{prefix}&4⚔ Clan &f{attacker} &4declared war on clan &f{defender}&4!"
+war-started: "{prefix}&c⚔ War between &f{attacker} &cand &f{defender} &chas begun!"
+war-ended: "{prefix}&7War between &f{attacker} &7and &f{defender} &7has ended."
+war-won: "{prefix}&a🏆 Clan &f{winner} &awon the war against &f{loser}&a!"
+war-lost: "{prefix}&c💀 Clan &f{loser} &clost the war to clan &f{winner}&c."
+war-preparation: "{prefix}&e⏳ War will start in &f{time} &e(preparation)."
+war-already: "{prefix}&cYou are already at war with this clan."
+war-no-supply: "{prefix}&cNot enough supplies to declare war!"
+war-score: "{prefix}&7Score: &f{attacker} &7- &f{attacker_score} &8| &f{defender} &7- &f{defender_score}"
+
+# Siege
+siege-started: "{prefix}&c⚔ Siege of territory &f{territory} &chas started!"
+siege-success: "{prefix}&a🏴 Territory captured by clan &f{clan}&a!"
+siege-failed: "{prefix}&c🛡 Siege failed! Defenders held their ground."
+siege-destroyed: "{prefix}&a🛡 Siege point destroyed!"
+siege-progress: "{prefix}&7Siege: &f{progress}%"
+siege-already: "{prefix}&cThere is already a siege on this territory."
+
+# Supply
+supply-added: "{prefix}&aResources added to clan storage."
+supply-not-enough: "{prefix}&cNot enough resources in storage."
+supply-status: "{prefix}&7Storage: Food &f{food}&7, Materials &f{materials}&7."
+
+# Ranking
+top-header: "{prefix}&6===== Clan Ranking ====="
+top-entry: "&e{place}. &f{clan} &7- &f{power} &7power (&f{members} &7members)"
+top-footer: "{prefix}&6====================="
+
+# Info
+info-header: "{prefix}&6===== Clan Information ====="
+info-name: "&7Name: &f{clan} &7[&f{tag}&7]"
+info-leader: "&7Leader: &f{leader}"
+info-members: "&7Members: &f{count}&7/&f{max}"
+info-territories: "&7Territories: &f{count}&7/&f{max}"
+info-power: "&7Power: &f{power}"
+info-allies: "&7Allies: &f{allies}"
+info-enemies: "&7Enemies: &f{enemies}"
+info-footer: "{prefix}&6==============================="
